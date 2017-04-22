@@ -22,7 +22,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/jh_msg_change_pwd_success" />
 
-    <view
+    <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray" />

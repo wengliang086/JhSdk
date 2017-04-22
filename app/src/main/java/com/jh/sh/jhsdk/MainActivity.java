@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 
     @Override
     public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
+        fragmentTransaction = fragmentManager.beginTransaction();
         hideFragment(fragmentTransaction);
         switch (checkedId) {
             case R.id.id_rb_first:
