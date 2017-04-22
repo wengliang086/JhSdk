@@ -1,23 +1,26 @@
 package com.jh.sh.jhsdk;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.AutoCompleteTextView;
-import android.widget.EditText;
+import android.view.View;
 
 /**
  * A login screen that offers login via email/password.
  */
 public class LoginActivity extends AppCompatActivity {
 
-    // UI references.
-    private AutoCompleteTextView mEmailView;
-    private EditText mPasswordView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.jh_frag_register);
+        setContentView(R.layout.jh_msg_dialog);
+////        ButterKnife.bind(this);
+//        findViewById(R.id.id_submit).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+//            }
+//        });
     }
 }
 
