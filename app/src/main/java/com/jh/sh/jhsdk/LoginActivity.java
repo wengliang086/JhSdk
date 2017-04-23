@@ -5,7 +5,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.jh.sh.jhsdk.util.DialogUtil;
+
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * A login screen that offers login via email/password.
@@ -23,6 +26,11 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
             }
         });
+    }
+
+    @OnClick(R.id.id_register)
+    public void register() {
+        DialogUtil.showDialog(this, "");
     }
 }
 
