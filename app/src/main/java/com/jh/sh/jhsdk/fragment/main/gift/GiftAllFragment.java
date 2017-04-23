@@ -1,4 +1,4 @@
-package com.jh.sh.jhsdk.fragment.main;
+package com.jh.sh.jhsdk.fragment.main.gift;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,17 +9,19 @@ import android.view.ViewGroup;
 
 import com.jh.sh.jhsdk.R;
 
+import butterknife.ButterKnife;
+
 /**
  * Created by phoenix on 2017/4/22.
  */
 
-public class QuanziFragment extends Fragment {
+public class GiftAllFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View baseView = inflater.inflate(R.layout.jh_frag_main_quanzi, container, false);
-//        ButterKnife.bind(this, baseView);
+        View baseView = inflater.inflate(R.layout.jh_frag_main_gift_recommand, container, false);
+        ButterKnife.bind(this, baseView);
         return baseView;
     }
 }
