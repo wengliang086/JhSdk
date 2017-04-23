@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">JhSdk</string>
 
+    <string name="jh_progress_dialog">加载中 &#8230;</string>
     <!-- Strings related to login -->
     <string name="jh_hint_input_phone">请输入手机号</string>
     <string name="jh_hint_input_verify_code">请输入验证码</string>

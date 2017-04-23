@@ -5,7 +5,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.google.gson.JsonObject;
+import com.jh.sh.jhsdk.service.HttpMethods;
+import com.jh.sh.jhsdk.service.JhException;
+import com.jh.sh.jhsdk.service.base.ObserverOnNextAndErrorListener;
 import com.jh.sh.jhsdk.util.DialogUtil;
+import com.jh.sh.jhsdk.util.LogUtil;
+
+import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -31,6 +38,36 @@ public class LoginActivity extends AppCompatActivity {
     @OnClick(R.id.id_register)
     public void register() {
         DialogUtil.showDialog(this, "");
+    }
+
+    @OnClick(R.id.id_forget_pwd)
+    public void forgetPwd() {
+        HttpMethods.getInstance().getHelpTypes(this, new ObserverOnNextAndErrorListener<List<JsonObject>>() {
+            @Override
+            public void onNext(List<JsonObject> jsonObjects) {
+                for (JsonObject obj : jsonObjects) {
+                    LogUtil.d(obj.toString());
+                }
+            }
+
+            @Override
+            public void onError(JhException e) {
+
+            }
+        });
+        HttpMethods.getInstance().getHelpTypes2(this, new ObserverOnNextAndErrorListener<List<JsonObject>>() {
+            @Override
+            public void onNext(List<JsonObject> jsonObjects) {
+                for (JsonObject obj : jsonObjects) {
+                    LogUtil.d(obj.toString());
+                }
+            }
+
+            @Override
+            public void onError(JhException e) {
+
+            }
+        });
     }
 }
 
